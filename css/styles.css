@@ -142,25 +142,25 @@ header p{
 .about, .about-image{
   /*Your code here */
   /* See documentation for mobile view */
-  display: inline-block;
+  display: inline-flex;
 }
 
 .method, .method-image{
   /*Your code here */
   /* See documentation for mobile view */
-  display: inline-block;
+  display: inline-flex;
 }
 
 .clients, .clients-image{
   /*Your code here */
   /* See documentation for mobile view */
-  display: inline-block;
+  display: inline-flex;
 }
 
 .contact, .contact-image{
   /*Your code here */
   /* See documentation for mobile view */
-  display: inline-block;
+  display: inline-flex;
 }
 
 .text-block{
