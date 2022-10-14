@@ -44,13 +44,13 @@ nav a:focus {
 
 .skip a{
   background: white;
-  left: 500px;
+  left: -500px;
   padding: 6px;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
   /*Your code here - position relative to the parent */
-  position: relative;
+  position: absolute;
   /*Your code here - place 40px higher */;
   top: -40px;
 }
@@ -87,9 +87,11 @@ footer{
 nav{
   background-color: #ddd;
   padding: 20px 0;
-  text-align: center;
+  text-align: left;
   /*Your code here*/
   /*Span the top row*/
+  grid-column: 1 / -1;
+  grid-row: 1;
 }
 
 header{
@@ -98,13 +100,14 @@ header{
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
   color: white;
-  height: 400px;                /* Parallax effect */
+  min-height: 400px;                /* Parallax effect */
   /* Your code here */
   /* Set background-image to header.jpg in the images folder */
   background-image: url('../images/header.jpg');
-  min-height: 400px;
+  background-color: #DDDDDD;
   /* Span one row */
-  grid-column: 1;
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 header p{
@@ -122,45 +125,47 @@ header p{
   grid-column: 1fr 5fr 1fr;
   row-gap: 30px;
 }
+img {
+  width: 100%;
+}
 
 .about, .method, .clients, .contact{
   /*Your code here */
   /* See documentation for mobile view */
-  grid-column: 2;
+  grid-column: 2 / span 1;
+  grid-row: auto / span 1;
 
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
    /*Your code here */
    /* See documentation for mobile view */
-   width: 100%;
    grid-column: 1 / span 3;
    max-height: 500px;
-   object-fit: fill;
+   overflow: hidden;
 }
 
 .about, .about-image{
   /*Your code here */
-  /* See documentation for mobile view */
-  display: inline-flex;
+  grid-row: 3 / span 1;
 }
 
 .method, .method-image{
   /*Your code here */
   /* See documentation for mobile view */
-  display: inline-flex;
+  grid-row: 4 / span 1;
 }
 
 .clients, .clients-image{
   /*Your code here */
   /* See documentation for mobile view */
-  display: inline-flex;
+  grid-row: 5 / span 1;
 }
 
 .contact, .contact-image{
   /*Your code here */
   /* See documentation for mobile view */
-  display: inline-flex;
+  grid-row: 6 / span 1;
 }
 
 .text-block{
@@ -181,6 +186,7 @@ header p{
   .container{
     /*Your code here */
     /* See documentation for desktop view */
+    display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
   }
@@ -189,8 +195,9 @@ header p{
     background-color: #ddd;
     text-align: right;
     padding: 35px 0px;
-    align-self: right;
+    align-self: center;
   }
+ 
 
   .about, .clients, .method-image, .contact-image{
     /*Your code here */
