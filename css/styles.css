@@ -87,7 +87,7 @@ footer{
 nav{
   background-color: #ddd;
   padding: 20px 0;
-  text-align: left;
+  text-align: center;
   /*Your code here*/
   /*Span the top row*/
   grid-column: 1 / -1;
@@ -125,14 +125,11 @@ header p{
   grid-column: 1fr 5fr 1fr;
   row-gap: 30px;
 }
-img {
-  width: 100%;
-}
 
 .about, .method, .clients, .contact{
   /*Your code here */
   /* See documentation for mobile view */
-  grid-column: 2 / span 1;
+  grid-column: 1 / span 1;
   grid-row: auto / span 1;
 
 }
@@ -142,6 +139,7 @@ img {
    /* See documentation for mobile view */
    grid-column: 1 / span 3;
    max-height: 500px;
+   width: 100%;
    overflow: hidden;
 }
 
